@@ -2,6 +2,8 @@ const container = document.querySelector('.container');
 let count = 0;
 let isPainting = false;
 
+let x = 16;
+
 function createGrid(x){
     for(let i = 0 + 1 ; i <= x * x; i++){
         const grid = document.createElement('div');
@@ -11,7 +13,7 @@ function createGrid(x){
     }
 }
 
-createGrid(16);
+createGrid(x);
 
 const sketch = document.querySelectorAll('.grid');
 sketch.forEach(grid => grid.addEventListener('mousedown', startColoring));
@@ -49,5 +51,6 @@ function changeColor(e) {
 
 // resets the Page 
 function refreshPage(){
-    console.log(sketch);
-};
+    const remove = document.querySelectorAll('.change');
+    remove.forEach(div => div.classList.remove('change'));
+}
