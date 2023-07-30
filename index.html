@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-A-Sketch</title>
     <link rel = 'stylesheet' href="./style.css">
+    <link rel = 'stylesheet' href="./control.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
@@ -18,15 +19,15 @@
 
         <!-- control over ur webpage  -->
         <div class = control>
-            <form class = 'back-Color
-            '> <!-- change background Color-->
-                <label for = 'backgroundColor'> Background: </label>
-                <input type = 'color' id = 'backgroundColor'>
+            <form class = 'back-Color btn'  >
+                <!-- change background Color-->
+                <label for = 'backgroundColor' class = 'btnP'> Background: </label>
+                <input type = 'color' id = 'backgroundColor' value="#FFFFFF">
             </form>
 
-            <button class ='eraser btn' type = 'submit' onClick="eraseDiv()">Erase</button> <!-- Erase the selected div -->
-            <button class ='resetBTN btn' type="submit" onClick="refreshPage()">Reset</button> <!-- Reset the container div-->
-            <input type ="range"> <!-- inputs the number of grid -->
+            <button class ='eraser btn btnP' type = 'submit' onClick="eraseDiv()">Erase</button> <!-- Erase the selected div -->
+            <button class ='resetBTN btn btnP' type="submit" onClick="refreshPage()">Reset</button> <!-- Reset the container div-->
+            <!-- <input type ="range"> inputs the number of grid -->
         </div>
           
            

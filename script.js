@@ -1,4 +1,7 @@
 const container = document.querySelector('.container');
+const change = document.querySelectorAll('.change');
+//necessary styling
+container.style.backgroundColor = '#FFFFFF';
 let count = 0;
 let isPainting = false;
 
@@ -8,7 +11,11 @@ function createGrid(x){
     for(let i = 0 + 1 ; i <= x * x; i++){
         const grid = document.createElement('div');
         grid.classList.add('grid');// adds classes to each created grids
+        grid.style.borderStyle = 'solid';
+        grid.style.borderColor = '#000000';
+        grid.style.borderWidth = '0.5px';
         container.appendChild(grid); 
+        grid.style.
         count++;// show th exact number of grids created;
     }
 }
@@ -38,6 +45,10 @@ function changeColor(e) {
     this.classList.add('change');
 };
 
+//necessary styling
+container.style.backgroundColor = '#FFFFFF';
+
+
 /* -------------------- game control bar start*/
  var clicked = 0;
  var btn = document.querySelector('eraser')
@@ -54,6 +65,7 @@ const changeBackground = document.getElementById('backgroundColor');
 changeBackground.addEventListener('change', function(e){
     // selects the value of the input color element
     const selectColor = changeBackground.value;
+
     const grid = document.querySelectorAll('.grid');
     grid.forEach(div => div.style.borderWidth='0.5px')
     grid.forEach(div => div.style.borderStyle = 'solid');
@@ -62,6 +74,7 @@ changeBackground.addEventListener('change', function(e){
         console.log(selectColor);
         grid.forEach(div => div.style.borderColor='white');
         container.style.backgroundColor = selectColor;
+        
      }else {
         grid.forEach(div => div.style.borderColor='#000000');
 
