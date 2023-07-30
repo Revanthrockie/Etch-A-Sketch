@@ -38,7 +38,7 @@ function changeColor(e) {
     this.classList.add('change');
 };
 
-/* game control*/
+/* -------------------- game control bar start*/
  var clicked = 0;
  var btn = document.querySelector('eraser')
  
@@ -49,8 +49,33 @@ function changeColor(e) {
   
 };
 
+const changeBackground = document.getElementById('backgroundColor');
+
+changeBackground.addEventListener('change', function(e){
+    // selects the value of the input color element
+    const selectColor = changeBackground.value;
+    const grid = document.querySelectorAll('.grid');
+    grid.forEach(div => div.style.borderWidth='0.5px')
+    grid.forEach(div => div.style.borderStyle = 'solid');
+
+    if(selectColor === '#000000'){ // checks if the color is black
+        console.log(selectColor);
+        grid.forEach(div => div.style.borderColor='white');
+        container.style.backgroundColor = selectColor;
+     }else {
+        grid.forEach(div => div.style.borderColor='#000000');
+
+        // assign the selected color to the container
+        container.style.backgroundColor = selectColor;
+}
+})
+
+
+// ---------------- controls bar end
+
 // resets the Page 
 function refreshPage(){
     const remove = document.querySelectorAll('.change');
     remove.forEach(div => div.classList.remove('change'));
 }
+

@@ -13,19 +13,30 @@
     </header>
     <div class = 'sketchGame'>
         <div class="container">
-
+            <!-- this is where all the div that are generated via javascript placed. -->
         </div>
+
+        <!-- control over ur webpage  -->
         <div class = control>
-            <button class ='eraser btn' type = 'submit' onClick="eraseDiv()">Erase</button>
-            <button class ='resetBTN btn' type="submit" onClick="refreshPage()">Reset</button>
-            <input type ="range">
+            <form class = 'back-Color
+            '> <!-- change background Color-->
+                <label for = 'backgroundColor'> Background: </label>
+                <input type = 'color' id = 'backgroundColor'>
+            </form>
+
+            <button class ='eraser btn' type = 'submit' onClick="eraseDiv()">Erase</button> <!-- Erase the selected div -->
+            <button class ='resetBTN btn' type="submit" onClick="refreshPage()">Reset</button> <!-- Reset the container div-->
+            <input type ="range"> <!-- inputs the number of grid -->
         </div>
           
            
            
     </div>
     <footer>
-        <div class = 'copyRight'>Github @ RockieRevanth</div>
+        <div class = 'copyRight'>
+            <a href = 'https://github.com/Revanthrockie'>Github @ RockieRevanth</a>
+            <img src = './images/icons8-github-48.png'>
+        </div>
     </footer>
         
 
